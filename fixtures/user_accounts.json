@@ -1,0 +1,1 @@
+[ {"model": "cloudmusic.useraccounts", "pk": 1, "fields": {"email": "mateo@cloudmusic.co", "password": "pbkdf2_sha256$390000$EymWL0FrIZSYORq4perrYY$0V7zpQBxxzysypKe7auHZ7GXgWekyUicgcnNhSY4UFM=", "created_timestamp": "2023-03-10T23:35:22.418Z", "last_updated_timestamp": "2023-03-10T23:35:22.419Z"}}]
