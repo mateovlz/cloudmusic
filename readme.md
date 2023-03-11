@@ -43,7 +43,7 @@ In the following section, we are going show all the endpoints **mycloudmusic** w
 | PUT |  http://copierking.com.co:40/song | Update the song you pass as JSON Body `{"id": 1, "name": "Papatoi", "duration": "25","public":  "Y"}` |
 | GET |  http://copierking.com.co:40/song/(pk) | Retrieve the song correspond the (pk) you passed, if you didn't created it but is public will show otherwise will appear a message of not found  |
 | DELETE |  http://copierking.com.co:40/song/(pk) | Deletes the song with the `(pk)` you passed   |
-| GET |  http://copierking.com.co:40/song/list/(type) |  Retrieve a list of songs replace ~ `(type)` with `private` or `public`, the `private` will show you the songs that you created in private |
+| GET |  http://copierking.com.co:40/song/list/(type) |  Retrieve a list of songs with pagination of 20 songs per page with the following page in the JSON response replace ~ `(type)` with `private` or `public`, the `private` will show you the songs that you created in private |
 | GET  |  http://copierking.com.co:40/random-number | Retrieve a random number without authentication **public endpoint**  |  |
 
 ## Help
