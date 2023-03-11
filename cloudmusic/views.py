@@ -193,7 +193,7 @@ class UserLogin(APIView):
             message += ' [error] account not found, please create an account to Login'
             status_response = status.HTTP_404_NOT_FOUND
 
-        return JsonResponse({'message': message, 'acces_token': access_token}, status=status_response)
+        return JsonResponse({'message': message, 'access_token': access_token}, status=status_response)
 
 
 class UserSignUp(APIView):
