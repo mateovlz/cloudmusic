@@ -4,8 +4,6 @@ from rest_framework.parsers import JSONParser
 from cloudmusic.models import Song, UserAccounts
 from cloudmusic.serializers import SongSerializer, UserSerializer, SongUpdateSerializer
 from rest_framework.views import APIView, Response,exception_handler
-from django.http import Http404
-import re
 from django.contrib.auth.hashers import make_password, check_password
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.permissions import IsAuthenticated
@@ -14,6 +12,9 @@ from rest_framework_simplejwt.exceptions import TokenError, InvalidToken
 from rest_framework.pagination import PageNumberPagination
 from cloudmusic.pagination import PaginationHandlerMixin
 from cloudmusic.exceptions import NotFound
+from django.http import Http404
+import re
+import random
 
 
 class BasicPagination(PageNumberPagination):
@@ -226,6 +227,12 @@ class UserSignUp(APIView):
 
         return JsonResponse({'message': message}, status=status_response)
 
+
+class PublicEndpoint(APIView):
+    def get(self, request):
+        random_number = random.randint(1, 1000)
+        message = f'This is your random number {random_number}'
+        return JsonResponse({'message': message}, status=status.HTTP_200_OK)
 
 def custom_exception_handler(exc, context):
     response = exception_handler(exc, context)

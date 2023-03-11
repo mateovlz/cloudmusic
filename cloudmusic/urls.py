@@ -8,6 +8,7 @@ urlpatterns = [
     path('song', views.SongDetail.as_view(), name='song'),
     path('signUp', views.UserSignUp.as_view(), name='signUp'),
     path('login', views.UserLogin.as_view(), name="login"),
+    path('random-number', views.PublicEndpoint.as_view(), name="random-number"),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
